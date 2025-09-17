@@ -3,9 +3,6 @@ import pandas as pd
 from db import session
 from utils import estaciones_por_linea_ramal, ramales_de_linea, tramos_tipo_riel, cantidad_km_tipo_riel
 
-
-st.title("App")
-
 opcion = st.sidebar.selectbox(
     "Líneas:",
     ["Línea Roca", "Línea San Martín", "Linea Mitre", "Línea Sarmiento"]
