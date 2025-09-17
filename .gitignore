@@ -1,0 +1,51 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# --- Entornos virtuales ---
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Bases de datos locales ---
+*.db
+*.sqlite3
+
+# --- Alembic ---
+alembic.ini
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# --- Logs ---
+*.log
+
+# --- Configuración IDE/Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Archivos temporales ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# --- Test ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
