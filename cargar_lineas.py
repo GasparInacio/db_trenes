@@ -1,7 +1,7 @@
 from modelos import Linea
 from db import session
 
-# Crear algunas líneas manualmente
+# Líneas a cargar
 lines = [
     Linea(nombre="Linea Roca"),
     Linea(nombre="Linea Sarmiento"),

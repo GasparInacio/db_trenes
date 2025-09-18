@@ -2,15 +2,19 @@ from db import session
 from modelos import Ramal, Via, TipoRiel, ViaSegmento, Sentido
 import pandas as pd
 
+# Ramal cargado en bd
 ramal = session.query(Ramal).filter_by(nombre="Constitucion - La Plata").first()
 
+# Excel con datos
 df = pd.read_excel('rail/constitucion_lp_riel.xlsx')
 
+# Diccionario para las columnas de dirección
 direction_map = {
     "up": "ascendente",
     "down": "descendente"
 }
 
+# Lectura del DataFrame
 for _, row in df.iterrows():
     via_raw = str(row["LineName"]).lower().strip()  # "VIA 1" -> "via 1"
     via_num = int(via_raw.replace("via", "").strip())
@@ -54,5 +58,5 @@ for _, row in df.iterrows():
     )
     session.add(segmento)
 
-# 5. Guardamos todo
+# 5. Guardamos
 session.commit()

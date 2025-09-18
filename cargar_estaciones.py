@@ -2,11 +2,13 @@ from db import session
 from modelos import Ramal, Estacion, Tramo, Sentido, Via
 import pandas as pd
 
+# Ramal de referencia
 ramal = session.query(Ramal).filter_by(nombre="Constitucion - La Plata").first()
 
+# Lectura del excel
 df = pd.read_excel('stations/roca/constitucion_laplata.xlsx')
 
-# Guardamos todas las estaciones primero
+# Lectura de estaciones y guardado
 stations_dict = {}
 for _, row in df.iterrows():
     station = session.query(Estacion).filter_by(nombre=row["StationName"]).first()
@@ -22,7 +24,7 @@ for _, row in df.iterrows():
 
 session.commit()
 
-# Creamos los tramos consecutivos
+# Creación de tramos consecutivos
 for i in range(len(df)-1):
     origen_name = df.loc[i, "StationName"]
     destino_name = df.loc[i+1, "StationName"]
