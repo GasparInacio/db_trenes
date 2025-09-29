@@ -1,14 +1,12 @@
 import streamlit as st
 import pandas as pd
-from db import session
+from controllers.db import session
+from paginas.sidebar import sidebar
 from utils import estaciones_por_linea_ramal, ramales_de_linea, tramos_tipo_riel, cantidad_km_tipo_riel
 
-opcion = st.sidebar.selectbox(
-    "Líneas:",
-    ["Línea Roca", "Línea San Martín", "Linea Mitre", "Línea Sarmiento"]
-)
+nombre, id_linea = sidebar()
 
-if opcion == "Línea Roca":
+if seleccion == "Línea Roca":
     st.header("Línea Roca")
     st.write("Datos")
 
@@ -67,14 +65,14 @@ if opcion == "Línea Roca":
     else:
         st.warning("No hay datos de riel para este ramal.")
 
-elif opcion == "Línea San Martín":
+elif seleccion == "Línea San Martín":
     st.header("Línea San Martín")
     st.write("Datos")
 
-elif opcion == "Linea Mitre":
+elif seleccion == "Linea Mitre":
     st.header("Línea Mitre")
     st.write("Datos")
 
-elif opcion == "Línea Sarmiento":
+elif seleccion == "Línea Sarmiento":
     st.header("Línea Línea Sarmiento")
     st.write("Datos")

@@ -1,4 +1,4 @@
-from db import session
+from controllers.db import session
 from modelos import Linea, Ramal
 
 # Línea de referencia

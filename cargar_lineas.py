@@ -1,5 +1,5 @@
 from modelos import Linea
-from db import session
+from controllers.db import session
 
 # Líneas a cargar
 lines = [

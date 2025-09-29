@@ -1,4 +1,4 @@
-from db import session
+from controllers.db import session
 from modelos import Ramal, Via, TipoRiel, ViaSegmento, Sentido
 import pandas as pd
 
