@@ -2,7 +2,7 @@ from modelos.estacion import Estacion
 
 
 class EstacionManager:
-    def __init__(self, session, id_ramal, id_linea):
+    def __init__(self, session, id_ramal):
 
         self.session = session
         self.id_ramal = id_ramal
