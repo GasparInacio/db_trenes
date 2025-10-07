@@ -21,3 +21,6 @@ class Estacion(Base):
             'kilometro_inicio': self.kilometro_inicio,
             'kilometro_fin': self.kilometro_fin,
         }
+
+from modelos.tramo import Tramo
+from modelos.ramal import Ramal

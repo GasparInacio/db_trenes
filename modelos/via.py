@@ -21,3 +21,11 @@ class Via(Base):
             'id_sentido': self.id_sentido,
             'numero': self.numero,
         }
+
+from modelos.sentido import Sentido
+from modelos.via_segmento import ViaSegmento
+from modelos.ramal import Ramal
+from modelos.tramo import Tramo
+
+
+

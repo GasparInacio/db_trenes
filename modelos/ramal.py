@@ -12,7 +12,7 @@ class Ramal(Base):
     linea = relationship("Linea", back_populates="ramales")
     tramos = relationship("Tramo", back_populates="ramal")
     vias = relationship("Via", back_populates="ramal")
-    estacions = relationship("Estacion", back_populates="ramal")
+    estaciones = relationship("Estacion", back_populates="ramal")
 
     def to_dict(self):
         return {
@@ -21,3 +21,9 @@ class Ramal(Base):
             "descripcion": self.descripcion,
             "id_linea": self.id_linea,
         }
+
+from modelos.linea import Linea
+from modelos.estacion import Estacion
+from modelos.via import Via
+from modelos.tramo import Tramo
+

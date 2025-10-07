@@ -14,7 +14,6 @@ class SentidoManager:
                 sentido = Sentido(nombre=nombre)
                 self.session.add(sentido)
                 self.session.commit()
-                self.session.flush()
                 return sentido.to_dict()
             except Exception as e:
                 self.session.rollback()

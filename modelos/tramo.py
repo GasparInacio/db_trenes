@@ -27,3 +27,9 @@ class Tramo(Base):
             'km_inicio': self.km_inicio,
             'km_fin': self.km_fin
         }
+
+from modelos.via import Via
+from modelos.estacion import Estacion
+from modelos.ramal import Ramal
+
+

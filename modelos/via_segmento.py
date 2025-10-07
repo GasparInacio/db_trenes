@@ -21,3 +21,9 @@ class ViaSegmento(Base):
             'km_fin': self.km_fin,
             'id_tipo_riel': self.id_tipo_riel,
         }
+
+from modelos.via import Via
+from modelos.tipo_riel import TipoRiel
+
+
+

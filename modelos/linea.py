@@ -16,3 +16,7 @@ class Linea(Base):
             "nombre": self.nombre,
             "descripcion": self.descripcion
         }
+
+from modelos.ramal import Ramal
+
+

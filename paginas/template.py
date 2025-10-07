@@ -1,12 +1,11 @@
 import streamlit as st
-from controllers.ramal_manager import RamalManager
 
 class PaginaTemplate:
-    def __init__(self, id_linea, manager_linea, manager_ramal: RamalManager):
+    def __init__(self, id_linea, manager_ramal):
         self.id_linea = id_linea
-        self.manager_linea = manager_linea
+        #self.manager_linea = manager_linea
         self.manager_ramal = manager_ramal
-        self.linea = self.manager_linea.obtener_linea(self.id_linea)
+        #self.linea = id
         self.ramales = self.manager_ramal.obtener_ramales(id_linea=self.id_linea)
 
     def header(self):

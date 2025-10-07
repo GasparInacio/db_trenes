@@ -10,7 +10,7 @@ class ViaManager:
         vias = self.session.query(Via).filter_by(id_ramal=self.id_ramal).all()
         return [v.to_dict() for v in vias]
 
-    def agregar_via(self, id_ramal, id_sentido, numero):
+    def agregar_via(self, id_sentido, numero):
         nueva_via = Via(id_ramal=self.id_ramal, id_sentido=id_sentido, numero=numero)
         if nueva_via:
             try:

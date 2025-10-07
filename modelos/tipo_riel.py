@@ -14,3 +14,7 @@ class TipoRiel(Base):
             'id': self.id,
             'nombre': self.nombre
         }
+
+from modelos.via_segmento import ViaSegmento
+
+

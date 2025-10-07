@@ -14,3 +14,8 @@ class Sentido(Base):
             'id': self.id,
             'nombre': self.nombre
         }
+
+from modelos.via import Via
+
+
+
